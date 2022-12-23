@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 10px;
+        }
+        body { font-weight: bold; font-size: 12px;}
+        p {
+            width: 400px;
+            height: 50px;
+            border: 1px solid red;
+        }
+        .b1 {
+            position: static;   /* 포지션 설정이 작동 안됨, 문서 흐름에 따라 배치됨*/
+            top : 100px; left: 100px;
+        }
+        .b2 {
+            position: relative;   /* 포지션 설정이 작동 안됨, 문서 흐름에 따라 배치됨*/
+            top : 30px; left: 30px;
+        }
+        .b3 {
+            position: relative;
+            top: 30px; left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 상대 위치 설정은 자신의 박스가 기본적으로 위치한 곳이 기준점
+        -- 포지션 위치가 정의되지 않은 기본 상태가 기준점
+    -->
+
+    <h1> position Style 2 - relative Position</h1>
+    <p class="b1"> 정적 위치 설정 적용 1</p>
+    <p class="b2"> 정적 위치 설정 적용 2</p>
+    <p class="b3"> 정적 위치 설정 적용 3</p>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        header {
+            /* border: 1px solid red; */
+            background-color: beige;
+            width: 100%;
+            height: 10%;
+        }
+
+        li {
+            display: inline-flex;
+        }
+
+
+
+        .s1 {
+            /* border: 1px solid red; */
+            background-color: skyblue;
+            width: 30%;
+            height: 80%;
+            float: left;
+        }
+        .s2 {
+            /* border: 1px solid red; */
+            background-color: aquamarine;
+            width: 70%;
+            height: 80%;
+            float: left;
+
+        }
+        footer {
+            /* border: 1px solid red; */
+            background-color: darkcyan;
+            width: 100%;
+            height: 10%;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <!-- Float 속성을 사용해서 레이아웃 실습 
+            레이아웃 잡을 때 border 1px solid red;
+    -->
+    <div></div>
+    <header>
+        <nav> 메뉴 <p />
+            <span style="float: left;"> 목차 </span>
+            <ul>
+                <li><a href = "#">구글</a></li>
+                <li><a href = "#">애플</a></li>
+                <li><a href = "#">오라클</a></li>
+                <li><a href = "#">자바</a></li>
+                <li><a href = "#">아마존</a></li>
+                <li><a href = "#">에져</a></li>
+                <li><a href = "#">MySQL</a></li>
+            </ul>
+        </nav>
+    </header>       <!-- 100%  height : 10%-->   
+    <section class="s1">sub</section>     <!-- 왼쪽 30%                -->
+    <section class="s2">main</section>     <!-- 중앙 (main) 70%         80% -->
+    <footer>footer</footer>                   <!-- 100%                    10%-->
+    
+
+</body>
+</html>

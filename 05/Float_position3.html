@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float 을 사용하면서 clear</title>
+    <style>
+        div {
+            border: 1px solid red;
+            width: 200px;
+            margin: 10px;
+            float: left;
+        }
+        .div1 {overflow: auto;}
+        .div2 {width: 500px;}
+        .div3 {
+            clear: both;
+        }
+        .div4 {width: 500px;}
+    </style>
+</head>
+<body>
+    <h3> Float 을 사용하면서 clear 을 적절하게 사용해야 한다.</h3>
+    <div class="div1"> <img src="../img-04/pic1.jpg"></div>
+    <div class="div2">div 2 - 글자글자글자글자글자글자글자글자글자글자글자글자글자글자글자글자
+        글자글자글자글자글자글자글자글자글자글자글자글자글자글자글자글자
+        글자글자글자글자글자글자글자글자글자글자글자글자글자글자글자글자</div>
+    <div class="div3"><img src="../img-04/pic2.jpg"></div>
+    <div class="div4">div 4 - 글자글자글자글자글자글자글자글자글자글자글자글자글자글자글자글자
+        글자글자글자글자글자글자글자글자글자글자글자글자글자글자글자글자
+        글자글자글자글자글자글자글자글자글자글자글자글자글자글자글자글자</div>
+    
+</body>
+</html>
