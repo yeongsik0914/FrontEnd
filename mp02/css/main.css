@@ -1,0 +1,137 @@
+#login_menu {
+    width: 190px;
+    height: 130px;
+    border-radius: 10px;
+    background-color: rgba(201, 199, 199, 0.281);
+}
+
+#login-form {
+    margin-left: 5px;
+    float: left;
+    width: 185px;
+    height: 50px;
+}
+
+#login_ttl {
+    margin: 10px;
+}
+
+aside {
+    width: 215px;
+    height: 650px;
+    float: left;
+    margin-left: 10px;
+}
+
+#btns {
+    list-style-type: none;
+    height: 20px;
+    width: 190px;
+    font-size: 10px;
+    margin-top: 60px;
+    margin-left: 5px;
+}
+
+#sub_menu {
+    margin: 5px;
+    margin-top: 10px;
+}
+
+#banner_menu {
+    border: 1px solid silver;
+    width: 185px;
+    border-radius: 10px;
+}
+
+main {
+    margin-left:  230px;
+    width: 780px;
+    height: 650px;
+    margin-right: 45px;
+}
+
+#memo {
+    width: 190px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: rgba(201, 199, 199, 0.281);
+    margin-top: 15px;
+}
+
+#memo_img {
+    margin: 10px;
+}
+
+#memo ul {
+    margin-top: 10px;
+    margin-left: 30px;
+    font-size: 12px;
+}
+
+.all_post {
+    /* border: 1px solid red; */
+    height: 500px;
+}
+
+#section1 {
+    height: 50%;
+}
+#section2 {
+    height: 50%;
+    margin-top: 200px;
+}
+#post {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+#Youtube {
+    float: right;
+    width: 50%;
+    height: 100%;
+}
+
+#Notice {
+    height: 50%;
+}
+
+#Free_Board {
+    height: 50%;
+}
+
+#clear {
+    clear: both;
+    text-align: center;
+}
+
+#Notice ul {
+    list-style-type: none;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-left: 5px;
+    float: left;
+}
+
+#Free_Board ul {
+    list-style-type: none;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-left: 5px;
+    float: left;
+}
+
+
+#photo {
+    border: 1px solid rgba(129, 126, 126, 0.479);
+    margin-top: 10px;
+    height: 180px;
+    border-radius: 15px;
+}
+
+#float1 {
+    float: left;
+    margin-top: 30px;
+    list-style-type: none;
+}
+
