@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>board_list</title>
+    <link rel="stylesheet" text="text/css" href="css/board_list.css">
     <script>
         //Javascript를 넣는 블락
         function includeHTML(){
@@ -37,19 +38,19 @@
     </script>
 </head>
 <body>
-    <!-- JavaScript를 사용해서 외부 파일을 Include -->
+    <div id="board_list_wrap">
+        <!-- JavaScript를 사용해서 외부 파일을 Include -->
+        <!-- Headr 파일 Inclue-->
+        <div data-include = "header.html" style="margin-bottom: 10px;"></div>
 
-    <!-- Headr 파일 Inclue-->
-    <div data-include = "header.html" style="margin-bottom: 10px;"></div>
+        <!-- board_list 파일 Include -->
+        <div data-include = "board_list_main.html"></div>
 
-    <!-- main 파일 Include -->
-    <div data-include = "main.html"></div>
-
-    <!-- footer 파일 Inclue-->
-    <!-- <div data-include = "footer.html"></div> -->
-
-    <script>
-        includeHTML();
-    </script>
+        <!-- footer 파일 Inclue-->
+        <div data-include = "footer.html"></div>
+    </div> 
 </body>
 </html>
+<script>
+    includeHTML();
+</script>
