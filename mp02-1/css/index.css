@@ -1,0 +1,9 @@
+#index_wrap {
+    width: 1050px;
+    height: 120%;
+    margin: 0 auto;
+}
+
+body {
+    margin: 0; padding: 0;
+}

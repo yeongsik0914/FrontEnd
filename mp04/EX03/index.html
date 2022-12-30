@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex03</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        .screen {
+            width: 800px;
+            margin: 0 auto;
+            margin-top: 50px;
+            background-color: rgb(159, 159, 218);
+        }   
+        
+        
+        header {
+            background-color: blue;
+            width: 100%;
+            height: 80px;
+            color: white;
+            text-align: center;
+        }
+        header h1 {
+            padding-top: 20px;   
+        }
+
+        nav {
+            width: 100%;   
+        }
+
+        nav > ul {
+            list-style-type: none;
+            width: 100%;
+            height: 100%;
+            color:white;
+        }
+
+        nav > ul > li {
+            float: left;
+            margin: 15px;
+            margin-left: 25px;
+            margin-right: 45px;
+        }
+        main {
+            width: 100%;
+            height: 400px;
+            background-color: rgb(209, 205, 205);
+        }
+        section > h1 {
+            font-size: 30px;
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        form {
+            margin: 0 auto;
+            margin-top: 30px;
+            width: 650px;
+            height: 210px;
+            border: 3px solid rgb(175, 168, 168);
+            border-radius: 5px;
+        }
+
+        form > table {
+            width: 100%;
+            height: 100%;
+        }
+
+        form table ul {
+            width: 100%;
+            height: 100%;
+        }
+
+        form ul li {
+            border-radius: 4px;
+            list-style-type: none;
+            width: 49%;
+            height: 14%;
+            border: 1px solid rgb(175, 168, 168);
+            margin: 2px;
+            float: left;
+        }
+
+        .member_info {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        li input {
+            border-radius: 4px;
+        }
+
+        li button {
+            border-radius: 4px;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        footer {
+            width: 100%;
+            height: 65px;
+            background: linear-gradient(to right, blue,rgb(134, 134, 236));
+            color: white;
+        }
+        footer h4 {
+            padding: 17px;
+        }
+
+         /* 1.  400px 이상 기본 설정*/
+         @media only screen and ( max-width : 500px) {
+            .m_1 {
+                width: 100%;
+            }   
+         }
+    </style>
+</head>
+<body>
+    <div class="screen">
+        <header>
+            <h1>쇼핑몰 회원관리 VER 1.0</h1>
+        </header>
+        <nav>
+            <ul>
+                <li class="m_1">회원등록</li>
+                <li class="m_1">회원목록조회/수정</li>
+                <li class="m_1">회원매출조회</li>
+                <li class="m_1">홈으로</li>
+            </ul>
+        </nav>
+        <main style="clear: both;">
+            <section>
+                <h1>쇼핑몰 회원 등록</h1>
+                <form name="member" method="post">
+                    <table>
+                        <ul>
+                            <li class="member_info">회원번호(자동발생)</li>
+                            <li><input type="text"></li>
+                            <div class="clear"></div>
+                            <li class="member_info">회원성명</li>
+                            <li><input type="text"></li>
+                            <div class="clear"></div>
+                            <li class="member_info">회원주소</li>
+                            <li><input type="text"></li>
+                            <div class="clear"></div>
+                            <li class="member_info">가입일자</li>
+                            <li><input type="text"></li>
+                            <div class="clear"></div>
+                            <li class="member_info">고객등급[A:VIP,B일반,C:직원]</li>
+                            <li><input type="text"></li>
+                            <div class="clear"></div>
+                            <li class="member_info">도시코드</li>
+                            <li><input type="text"></li>
+                            <li style="width: 99%; text-align: center;">
+                                <button>등록</button>
+                                <button>조회</button>
+                            </li>
+                        </ul>
+                    </table>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <h4>HRDKOREA Copyright@2016 All rights reserve. Human Resources Development Service of Korea</h2>
+        </footer>
+    </div>
+       
+    
+</body>
+</html>
