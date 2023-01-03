@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판의 글 내용 보기 페이지</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/board_left.css">
+    <link rel="stylesheet" type="text/css" href="css/board_view_main.css">
+    <script>
+        //Javascript를 넣는 블락
+        function includeHTML(){
+            let z, elmnt, file, xhttp;
+        
+            z = document.getElementsByTagName("*");
+            
+            for (let i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            file = elmnt.getAttribute("data-include");
+            
+            if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                    if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                    if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                    /* Remove the attribute, and call this function once more: */
+                    elmnt.removeAttribute("data-include");
+                    includeHTML();
+                }//if
+                }//onreadystatechange
+        
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+            }//if - file
+            }//for
+        }//includeHTML
+    </script>
+</head>
+<body>
+<div id="wrap">
+    <!-- JavaScript를 사용해서 외부 파일을 Include -->
+    <!-- Headr 파일 Inclue-->
+    <div data-include = "header.html"></div>
+    <aside>
+        <!-- 로그인 박스 시작 -->
+        <div data-include="login_box.html"></div>
+        <!-- 로그인 박스 끝 -->
+        <nav id="sub_menu">
+            <ul>
+                <li><a href="board_list.html">+ 자유게시판</a></li>
+                <li><a href="#">+ 방명록</a></li>
+                <li><a href="#">+ 공지사항</a></li>
+                <li><a href="#">+ 등업 요청</a></li>
+                <li><a href="#">+ 포토갤러리</a></li>
+            </ul>
+        </nav>
+        <article id="sub_banner">
+            <ul>
+                <li><img src="img/banner1.png"></li>
+                <li><img src="img/banner2.png"></li>
+                <li><img src="img/banner3.png"></li>
+            </ul>
+        </article>
+    </aside>
+    <section id="main">
+        <img src="img/comm.gif">
+        <h2 id="board_title">자유 게시판</h2>
+        <div id="view_title_box">
+            <span>까스통님의 선물인 보드카가 정말 독하네요!!!</span>
+            <span id="info">루바토 | 조회 : 208 | 2016-04-28 (09:20)</span>
+        </div>
+        <p id="view_content">
+            까스통님 고맙습니다. <br>
+            까스통님 고맙습니다. <br>
+            까스통님 고맙습니다. <br>
+            까스통님 고맙습니다. <br>
+            까스통님 고맙습니다. <br>
+        </p>
+        <div id="comment_box">
+            <img id="title_comment" src="img/title_comment.gif">
+            <textarea></textarea>
+            <img id="ok_ripple" src="img/ok_ripple.gif">
+        </div>
+        <div id="buttons">
+            <a href="#"><img src="img/delete.png"></a>
+            <a href="board_list.html"><img src="img/list.png"></a>
+            <a href="board_write.html"><img src="img/write.png"></a>
+        </div>
+    </section>  <!-- section main -->
+    <div class="clear"></div>
+    <!-- footer 파일 Inclue-->
+    <div data-include = "footer.html"></div>
+ </div>    
+
+    
+</body>
+</html>
+<script>
+    includeHTML();
+</script>
