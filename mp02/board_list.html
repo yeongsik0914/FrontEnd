@@ -4,52 +4,137 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <script>
-        //Javascript를 넣는 블락
-        function includeHTML(){
-            let z, elmnt, file, xhttp;
-        
-            z = document.getElementsByTagName("*");
+    <title>Document</title>
+        <link rel="stylesheet" type="text/css" href="css/common.css">
+        <link rel="stylesheet" type="text/css" href="css/header.css">
+        <link rel="stylesheet" type="text/css" href="css/footer.css">
+        <link rel="stylesheet" type="text/css" href="css/board_left.css">
+        <link rel="stylesheet" type="text/css" href="css/board_list_main.css">
+        <script>
+            //Javascript를 넣는 블락
+            function includeHTML(){
+                let z, elmnt, file, xhttp;
             
-            for (let i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            file = elmnt.getAttribute("data-include");
+                z = document.getElementsByTagName("*");
+                
+                for (let i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("data-include");
+                
+                if (file) {
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                        /* Remove the attribute, and call this function once more: */
+                        elmnt.removeAttribute("data-include");
+                        includeHTML();
+                    }//if
+                    }//onreadystatechange
             
-            if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                if (this.readyState == 4) {
-                    if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                    if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                    /* Remove the attribute, and call this function once more: */
-                    elmnt.removeAttribute("data-include");
-                    includeHTML();
-                }//if
-                }//onreadystatechange
-        
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
-            }//if - file
-            }//for
-        }//includeHTML
-    </script>
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    return;
+                }//if - file
+                }//for
+            }//includeHTML
+        </script>
 </head>
 <body>
+<div id="wrap">
     <!-- JavaScript를 사용해서 외부 파일을 Include -->
-
     <!-- Headr 파일 Inclue-->
-    <div data-include = "header.html" style="margin-bottom: 10px;"></div>
-
-    <!-- main 파일 Include -->
-    <div data-include = "main.html"></div>
-
+    <div data-include = "header.html"></div>
+    <aside>
+        <!-- 로그인 박스 시작 -->
+        <div data-include="login_box.html"></div>
+        <!-- 로그인 박스 끝 -->
+        <nav id="sub_menu">
+            <ul>
+                <li><a href="board_list.html">+ 자유게시판</a></li>
+                <li><a href="#">+ 방명록</a></li>
+                <li><a href="#">+ 공지사항</a></li>
+                <li><a href="#">+ 등업 요청</a></li>
+                <li><a href="#">+ 포토갤러리</a></li>
+            </ul>
+        </nav>
+        <article id="sub_banner">
+            <ul>
+                <li><img src="img/banner1.png"></li>
+                <li><img src="img/banner2.png"></li>
+                <li><img src="img/banner3.png"></li>
+            </ul>
+        </article>
+    </aside>
+    <section id="main">
+        <img src="img/comm.gif">
+        <h2 id="board_title">자유 게시판</h2>
+        <div id="total_search">
+            <div id="total"> 총 5개의 게시물이 있습니다.</div>
+            <div id="search">
+                <div id="select_img"><img src="img/select_search.gif"></div>
+                <div id="search_select">
+                    <select>
+                        <option>제목</option>
+                        <option>내용</option>
+                        <option>글쓴이</option>
+                    </select>
+                </div>
+                <div id="search_input"><input type="text"></div>
+                <div id="search_btn"><img src="img/search_button.gif"></div>
+            </div>
+        </div>
+        <table>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>글쓴이</th>
+                <th>일시</th>
+                <th>조회수</th>
+            </tr>
+            <tr>
+                <td class="col1">1</td>
+                <td class="col2">
+                    <a href="board_view.html">까스통님의 선물인 보드카가 정말 독하네요!!!</a>
+                </td>
+                <td class="col3">루바토</td>
+                <td class="col4">2017-09-20</td>
+                <td class="col5">15</td>
+            </tr>
+            <tr>
+                <td class="col1">2</td>
+                <td class="col2">
+                    <a href="board_view.html">까스통님의 선물인 보드카가 정말 독하네요!!!</a>
+                </td>
+                <td class="col3">루바토</td>
+                <td class="col4">2017-09-20</td>
+                <td class="col5">15</td>
+            </tr>
+            <tr>
+                <td class="col1">3</td>
+                <td class="col2">
+                    <a href="board_view.html">까스통님의 선물인 보드카가 정말 독하네요!!!</a>
+                </td>
+                <td class="col3">루바토</td>
+                <td class="col4">2017-09-20</td>
+                <td class="col5">15</td>
+            </tr>
+        </table>
+        <div id="buttons">
+            <div class="col1">◀ 이전 1 다음 ▶</div>
+            <div class="col2">
+                <img src="img/list.png">
+                <a href="board_write.html"><img src="img/write.png"></a>
+            </div>
+        </div>
+    </section>  <!-- section main -->
+    <div class="clear"></div>
     <!-- footer 파일 Inclue-->
-    <!-- <div data-include = "footer.html"></div> -->
-
-    <script>
-        includeHTML();
-    </script>
+    <div data-include = "footer.html"></div>
+</div>
 </body>
 </html>
+<script>
+    includeHTML();
+</script>

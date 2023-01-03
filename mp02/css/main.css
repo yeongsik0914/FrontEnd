@@ -1,137 +1,153 @@
-#login_menu {
-    width: 190px;
-    height: 130px;
-    border-radius: 10px;
-    background-color: rgba(201, 199, 199, 0.281);
-}
-
-#login-form {
-    margin-left: 5px;
-    float: left;
-    width: 185px;
-    height: 50px;
-}
-
-#login_ttl {
-    margin: 10px;
-}
-
+/* 왼쪽 콘텐츠 */
 aside {
-    width: 215px;
-    height: 650px;
+    width: 190px;
     float: left;
-    margin-left: 10px;
 }
-
-#btns {
-    list-style-type: none;
+aside #login_box {
+    width: 186px;
+    height: 120px;
+    border: solid 1px #dddddd;
+    border-radius: 10px;
+    background-color: #f3f3f3;
+}
+aside #login_title {
+    margin: 10px 0 0 10px;
+}
+aside #input_button {
+    margin: 10px 0 0 10px;
+}
+aside #login_input {
+    float: left;
+}
+aside #login_btn {
+    float: left;
+    margin: 3px 0 0 5px;
+}
+aside #login_input input {
+    width: 100px;
     height: 20px;
-    width: 190px;
-    font-size: 10px;
-    margin-top: 60px;
-    margin-left: 5px;
+    border: solid 1px #dddddd;
+}
+aside #login_input li {
+    margin-top: 2px;
+}
+aside #join_search {
+    margin: 10px 0 0 5px;
 }
 
-#sub_menu {
-    margin: 5px;
-    margin-top: 10px;
-}
-
-#banner_menu {
-    border: 1px solid silver;
-    width: 185px;
-    border-radius: 10px;
-}
-
-main {
-    margin-left:  230px;
-    width: 780px;
-    height: 650px;
-    margin-right: 45px;
-}
-
-#memo {
-    width: 190px;
-    height: 150px;
-    border-radius: 10px;
-    background-color: rgba(201, 199, 199, 0.281);
+/* 방명록 */
+#guestbook {
+    width: 189px;
+    height: 135px;
     margin-top: 15px;
+    background-color: #eeeeee;
+    border: solid 1px #cccccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #dddddd;
+}
+#guestbook_title {
+    width: 165px;
+    padding: 16px 0 0 5px;
+    margin: 0 0 0 8px;
+    border-bottom: solid 1px #cccccc;
+}
+#guestbook ul {
+    margin: 10px 0 0 40px;
+}
+#guestbook li {
+    margin-top: 5px;
+    list-style-image: url("../img/icon_blue.gif");
 }
 
-#memo_img {
-    margin: 10px;
-}
-
-#memo ul {
-    margin-top: 10px;
-    margin-left: 30px;
-    font-size: 12px;
-}
-
-.all_post {
-    /* border: 1px solid red; */
-    height: 500px;
-}
-
-#section1 {
-    height: 50%;
-}
-#section2 {
-    height: 50%;
-    margin-top: 10px;
-}
-#post {
-    float: left;
-    width: 50%;
-    height: 100%;
-}
-
-#Youtube {
+/* 우측 메인 콘텐츠 */
+section#main {
+    width: 758px;
     float: right;
-    width: 50%;
-    height: 100%;
+    /* border:solid 1px #ff0000; */
 }
-
-#Notice {
-    height: 50%;
-}
-
-#Free_Board {
-    height: 50%;
-}
-
-#clear {
-    clear: both;
-    text-align: center;
-}
-
-#Notice ul {
-    list-style-type: none;
-    font-size: 14px;
-    margin-top: 5px;
-    margin-left: 5px;
-    float: left;
-}
-
-#Free_Board ul {
-    list-style-type: none;
-    font-size: 14px;
-    margin-top: 5px;
-    margin-left: 5px;
-    float: left;
-}
-
-
-#photo {
-    border: 1px solid rgba(129, 126, 126, 0.479);
+/* 공지사항, 자유 게시판, YOUTUBE를 포함하는 박스 */
+section#main #notice_free_youtube {
+    height: 250px;
+    position: relative;
     margin-top: 10px;
-    height: 180px;
-    border-radius: 15px;
+    /* border:solid 1px #ff0000; */
+}
+/* 공지사항 박스 */
+section#main #notice {
+    width: 360px;
+    position: relative;
+    /* border:solid 1px #ff0000; */
 }
 
-#float1 {
+/* 최근 게시물 제목 */
+section#main .latest_title {
+    padding-bottom: 3px;
+    border-bottom: solid 1px #cccccc;
+}
+section#main .latest_title img.latest_img {
     float: left;
-    margin-top: 30px;
-    list-style-type: none;
+}
+section#main .latest_title img.more {
+    float: right;
+}
+/* 최근 게시물 이미지와 목록 */
+section#main .latest_content ,image {
+    float: left;
+    margin: 10px 0 0 20px;
+}
+section#main .latest_content .list {
+    float: right;
+    /* border:solide 1px #ff0000; */
+}
+section#main .latest_content li {
+    padding: 10px 0 10px 0;
+    /* border:solide 1px #ff0000; */
+}
+section#main .latest_content .list div {
+    float: left;
+}
+section#main .latest_content .list .subject {
+    width: 170px;
+}
+/* 자유 게시판 박스 */
+section#main #free {
+    width: 360px;
+    position: absolute;
+    top: 120px;
+    /* border:solide 1px #ff0000; */
+}
+/* YOUTUBE 동영상 박스 */
+section#main #youtube {
+    width: 365px;
+    height: 250px;
+    position: absolute;
+    left: 380px;
+    /* border:solide 1px #ff0000; */
+}
+section#main #youtube-img {
+    margin: 10px 0 0 45px;
+}
+/* 포토갤러리 */
+#gallery {
+    margin-top: 240px;
 }
 
+section#main #gallery_box {
+    width: 749px;
+    height: 204px;
+    margin: 10px 0 0 5px;
+    border: solid 1px #cccccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #dddddd;
+}
+section #gallery_list {
+    padding: 25px 0 0 18px;
+}
+section .items {
+    float: left;
+    text-align: center;
+    margin-left: 35px; 
+}
+section .items li {
+    margin-top: 3px;
+}
