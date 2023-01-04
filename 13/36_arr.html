@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        indexOf(30) : 배열안의 30이 들어간 방 번호를 출력, 0 번방부터 출력 
+        lastIndexOf (30) : 마지막방부터 왼쪽으로 검색
+            배열에 해당 값이 존재하지 안흔 경우 : -1    <=                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+    -->
+    <script>
+        var data=[10, 20, 30, 40, 30, 60, 70, 30, 90,100]; 
+        document.write("배열데이터: ["+ data + "]<p/>");
+        document.write("처음부터검색한30의인덱스: "+ data.indexOf(30) + "<p/>");
+        document.write("마지막에서검색한30의인덱스: "+ data.lastIndexOf(30) + "<p/>");
+            //index(30,3) : index 3 이후에 나오는 30 값이 ㄷ르어간 방번호
+        document.write("세번째부터검색한30의인덱스: "+ data.indexOf(30, 3) + "<p/>");
+        document.write("처음부터검색한300의인덱스: "+ data.indexOf(300) + "<p/>");
+    </script>
+</body>
+</html>

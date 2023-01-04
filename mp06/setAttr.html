@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        #wrap {
+            width: 550px;
+            margin: 0 auto;
+        }
+        #title {
+            margin-top: 80px;
+            margin-bottom: 20px;
+        }
+        #coffee_box{
+            position: relative;
+            float: left;
+            width: 215px;
+            height: 210px;
+        }
+        #border_coffee {
+            position: absolute;
+            width: 190px;
+            height: 180px;
+            border: dashed 2px silver;
+            top: 8px;
+            left: 10px;     
+        }
+        #product_info {
+            float: right;
+            width: 280px;
+            height: 300px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        #product_info span {
+            margin: 10px;
+        }
+        .clear {
+            clear: both;
+        }
+        #coffee_img {
+
+        }
+        #coffee_img li {
+            list-style-type: none;
+            display: inline;
+        }
+        #coffee_img li img {
+            width: 70px;
+            height: 70px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="title">
+            <h1>에디오피아 게뎁</h1>
+        </div>
+        <div style="float: left;">
+            <div id="coffee_box">
+                <img id="coffee_big" src="images/coffee-pink.jpg" style="width: 205px; height: 205px; margin-left: 5px;">
+                <div id="border_coffee">
+                </div>
+            </div>
+            <div class="clear"></div>
+            <ul id="coffee_img">
+                <li><img src="images/coffee-pink.jpg" data-src="images/coffee-pink.jpg" class="pic"></li>
+                <li><img src="images/coffee-blue.jpg" data-src="images/coffee-blue.jpg" class="pic"></li>
+                <li><img src="images/coffee-gray.jpg" data-src="images/coffee-gray.jpg" class="pic"></li>
+            </ul>
+        </div>
+        <div id="product_info">
+            <span>상품명 : 에디오피아 게뎁</span> <br>
+            <span style="color: blue;">판매가 : 9,000원</span> <br>
+            <span>배송비 : 3,000원</span> <br>
+            <span>(50,000원 이상 구매시 무료</span> <br>
+            <span>적립금 : 180원(2%)</span> <br>
+            <span>로스팅 : 2019.06.17</span> <br><br>
+            <button type="button" style="width: 100%; height: 40px;">장바구니 담기</button>
+            <p/>
+            <div style="margin-top: 40px;">
+                <a href="#" style="color: blue; text-decoration: none;">상세 설명 보기</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var pics = document.getElementsByClassName("pic");
+    var coffee_big = document.getElementById("coffee_big");
+    for (var i=0; i<pics.length; i++){
+            pics[i].addEventListener("click", showCoffee);
+        }
+    function showCoffee() {
+            var bigLocation = this.getAttribute("data-src");   
+            coffee_big.setAttribute("src", bigLocation);
+        }
+</script>
