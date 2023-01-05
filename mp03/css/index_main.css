@@ -1,0 +1,56 @@
+/* 메인 콘텐츠 */
+section#main {
+    width: 990px;
+    margin: auto;
+}
+/* 좌측 카테고리 + 메인 이미지 + 공지사항/주간 이벤트*/
+section#cat1 {
+    width: 215px;
+    float: left;
+    margin-top: 15px;
+    font-weight: bold;
+}
+section#cat #cat_title {
+    padding: 12px;
+    background-color: #96c11f;
+    color: #ffffff;
+    text-align: center;
+}
+section#cat1 li {
+    color: #666666;
+    padding: 7px 0 7px 30px;
+    border-bottom: solid 1px #cccccc;
+}
+section#cat2 {
+    float: left;
+    margin-top: 15px;
+}
+section#cat3 {
+    width: 236px;
+    float: left;
+    margin-top: 15px;
+}
+section#cat3 #latest_notice {
+    width: 239px;
+    height: 161px;
+    background-image: url("../img/latest_notice.gif");
+    background-repeat: no-repeat;
+}
+section#cat3 #latest_notice ul {
+    padding: 42px 0 0 30px;
+    list-style-image: url(../img/blue_dot.gif);
+}
+section#cat3 #week_event {
+    width: 239px;
+    height: 191px;
+    margin-top: 11px;
+    background-image: url("../img/week_event.gif");
+    background-repeat: no-repeat;
+}
+section#cat3 #week_event img {
+    margin: 58px 0 0 22px;
+}
+/* 스페셜 숍 (special shop) */
+section#special_shop {
+    width: 592px;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        div .title {
+            font-size: 25px;
+            margin: 5px;
+        }
+        div .title2 {
+            font-size: 20px;
+            margin: 20px 0 20px 0;
+        }
+        div .contents {
+            margin-left: 10px;
+        }
+        #HTML {
+            display: none;
+        }
+        #CSS {
+            display: none;
+        }
+        #JS {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="a1">
+        <p class="title">자주 묻는 질문(FAQ)</p>
+        <div>
+            <p class="title2" id="Open_Close_HTML" onclick="HTML_button()">- 'HTML'이란 무엇인가요?</p>
+            <p class="contents" id="HTML">하이퍼텍스트 마크업 언어(HyperText MarkUp Language)입니다.</p>
+        </div>
+        <div>
+            <p class="title2" id="Open_Close_CSS" onclick="CSS_button()">- 'CSS'란 무엇인가요?</p>
+            <p class="contents" id="CSS">캐스케이딩 스타일 시트(Cascading Style Sheets)입니다.</p>
+        </div>
+        <div>
+            <p class="title2" id="Open_Close_JS" onclick="JS_button()">- 'JavaScript'란 무엇인가요?</p>
+            <p class="contents" id="JS">자바스크립트는 객체(Object)를 기초로 하는 스크립트 프로그래밍 언어입니다.</p>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var html_togle = 0;
+    var css_togle = 0;
+    var js_togle = 0;
+    function HTML_button() {
+        var contents = document.getElementById("HTML");
+        if(html_togle == 0){
+            contents.style.display = 'block';
+            html_togle = 1;
+        } else {
+            contents.style.display = 'none';
+            html_togle = 0;
+        } 
+         
+    }
+    function CSS_button() {
+        var contents = document.getElementById("CSS");
+        if(css_togle == 0){
+            contents.style.display = 'block';
+            css_togle = 1;
+        } else {
+            contents.style.display = 'none';
+            css_togle = 0;
+        } 
+    }
+    function JS_button() {
+        var contents = document.getElementById("JS");
+        if(js_togle == 0){
+            contents.style.display = 'block';
+            js_togle = 1;
+        } else {
+            contents.style.display = 'none';
+            js_togle = 0;
+        } 
+    }
+</script>

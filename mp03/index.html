@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인페이지</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/index_main.css">
+    <script>
+        //Javascript를 넣는 블락
+        function includeHTML(){
+            let z, elmnt, file, xhttp;
+        
+            z = document.getElementsByTagName("*");
+            
+            for (let i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            file = elmnt.getAttribute("data-include");
+            
+            if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                    if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                    if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                    /* Remove the attribute, and call this function once more: */
+                    elmnt.removeAttribute("data-include");
+                    includeHTML();
+                }//if
+                }//onreadystatechange
+        
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+            }//if - file
+            }//for
+        }//includeHTML
+    </script>
+</head>
+<body>
+<!-- JavaScript를 사용해서 외부 파일을 Include -->
+<!-- Headr 파일 Inclue-->
+<div data-include = "header.html"></div>
+<div class="clear"></div>
+<section id="main">
+    <section id="cat1">
+        <div id="cat_title">
+            CATEGORY ITEM
+        </div>
+        <ul>
+            <li>생활 아트</li>
+            <li>캔버스 아트</li>
+            <li>사진 벽지</li>
+            <li>창문형/현관문형</li>
+            <li>포인트 벽지</li>
+            <li>세계지도</li>
+            <li>앤티크 세계지도 벽지</li>
+            <li>입체 세계지도 벽지</li>
+            <li>어린이방 세계지도</li>
+            <li>족자형 풀스크린</li>
+            <li>맞춤제작 결제창</li>
+        </ul>
+    </section> <!-- section cat1 -->
+    <section id="cat2">
+        <img src="img/main_img.gif">
+    </section> <!-- section cat2 -->
+    <section id="cat3">
+        <div id="latest_notice">
+            <ul>
+                <li>폭설로 인한 배송지연 안내</li>
+                <li>폭설로 인한 배송지연 안내</li>
+                <li>폭설로 인한 배송지연 안내</li>
+                <li>폭설로 인한 배송지연 안내</li>
+                <li>폭설로 인한 배송지연 안내</li>
+                <li>폭설로 인한 배송지연 안내</li>
+            </ul>
+        </div>s
+            <img src="img/week_event_img.gif">
+        </div>
+    </section> <!-- section cat3 -->
+</section> <!-- section main -->
+<section id="special_shop">
+    <ul>
+        <li><img src="img/special_img1.gif"></li>
+        <li><img src="img/special_img2.gif"></li>
+    </ul>
+</section> <!-- section special_shop -->
+<section id="special_banner">
+    <div id="banner1">
+        <ul>
+            <li><img src="img/landscape_img1.gif"></li>
+            <li><img src="img/landscape_img2.gif"></li>
+        </ul>
+    </div>
+    <div id="banner2">
+        <ul>
+            <li><img src="img/point_wallpaper_img1.gif"></li>
+            <li><img src="img/point_wallpaper_img2.gif"></li>
+        </ul>
+    </div>
+    <div id="banner3">
+        <ul>
+            <li><img src="img/children_img1.gif"></li>
+            <li><img src="img/children_img2.gif"></li>
+        </ul>
+    </div>
+</section> <!-- section special_banner -->
+</body>
+</html>
+<script>
+    includeHTML();
+</script>
