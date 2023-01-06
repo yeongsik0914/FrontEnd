@@ -9,12 +9,22 @@
         ol {
             display: none;
         }
+        #toc-toggle {
+            color: blue;
+        }
+        #toc-toggle:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        #contents li {
+            float: left;
+            margin: -10px 20px 0 20px;
+        }
     </style>
 </head>
 <body>
-    목차 
-    <span id="toc-toggle" onclick="openclosetoc()">보이기</span>
-
+    목차 [<span id="toc-toggle" onclick="openclosetoc()">보이기</span>]
+ 
     <ol id="contents">
         <li>HTML</li>
         <li>CSS</li>
